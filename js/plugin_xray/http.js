@@ -244,8 +244,12 @@ class httpClass {
                         },
                         "protocol": "http",
                         "settings": {
-                            "address": args.finalAddress,
-                            "port": args.finalPort
+                            "servers": [
+                                {
+                                    "address": args.finalAddress,
+                                    "port": args.finalPort
+                                }
+                            ] 
                         },
                         "streamSettings": {
                             "network": "tcp"
@@ -256,7 +260,7 @@ class httpClass {
 
             // 认证：user 是对象数组，serverUsername 为空就整个不写
             if (ss.serverUsername.isNotBlank()) {
-                t0.outbounds[0].settings.user = [
+                t0.outbounds[0].settings.servers[0].users = [
                     {
                         "user": ss.serverUsername,
                         "pass": ss.serverPassword
