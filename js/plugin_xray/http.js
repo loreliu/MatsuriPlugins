@@ -149,7 +149,7 @@ class httpClass {
                     {
                         "type": "EditTextPreference",
                         "key": "serverPinnedCertificates",
-                        "icon": "c_baseline_push_pin_2"
+                        "icon": "ic_baseline_push_pin_24"
                     },
                     {
                         "type": "SwitchPreference",
