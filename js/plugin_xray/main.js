@@ -3,6 +3,7 @@ import { LANG, LANG_TR } from "../common/translate.js"
 
 import { vless } from "./vless.js"
 import { ss2022 } from "./ss2022.js"
+import { http } from "./http.js"
 
 // Init
 
@@ -36,6 +37,16 @@ export function nekoInit(b64Str) {
                 "canTCPing": true,
                 "canICMPing": true,
                 "needBypassRootUid": false,
+            },
+            {
+                "protocolId": "HTTP",
+                "haveStandardLink": false,
+                "canShare": false,
+                "canMux": false,
+                "canMapping": true,
+                "canTCPing": true,
+                "canICMPing": true,
+                "needBypassRootUid": false,
             }
         ]
     }
@@ -48,6 +59,9 @@ export function nekoProtocol(protocolId) {
     }
     if (protocolId == "Shadowsocks-2022") {
         return ss2022
+    }
+    if (protocolId == "HTTP") {
+        return http
     }
 }
 

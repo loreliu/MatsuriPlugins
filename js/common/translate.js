@@ -49,6 +49,10 @@ export var translates = {
         "zh_CN": "加密方式",
         "": "Encryption method",
     },
+    serverUsername: {
+        "zh_CN": "用户",
+        "": "Username",
+    },
     serverPassword: {
         "zh_CN": "密码",
         "": "Password",
@@ -60,6 +64,10 @@ export var translates = {
     serverHeader: {
         "zh_CN": "伪装类型",
         "": "Header type",
+    },
+    serverHeaders: {
+        "zh_CN": "标头",
+        "": "Headers",
     },
     serverSecurity: {
         "zh_CN": "传输层加密",
@@ -133,6 +141,10 @@ export var translates = {
     serverCertificates: {
         "zh_CN": "证书（链）",
         "": "Certificate (chain)",
+    },
+    serverPinnedCertificates: {
+        "zh_CN": "证书（链） SHA256 固定",
+        "": "pinnedPeerCertificateChainSha256",
     },
     serverFlow: {
         "zh_CN": "流控",
