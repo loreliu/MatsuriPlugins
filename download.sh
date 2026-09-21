@@ -48,16 +48,16 @@ unzip_mieru() {
 }
 
 download_xray() {
-  VERSION="v1.7.5"
+  VERSION="v1.7.5-1"
   mkdir_libs "app_xray/libs"
 
-  curl -Lso tmp.zip "https://github.com/XTLS/Xray-core/releases/download/$VERSION/Xray-android-arm64-v8a.zip"
+  curl -Lso tmp.zip "https://github.com/loreliu/Xray-core/releases/download/$VERSION/Xray-android-arm64-v8a.zip"
   unzip_xray arm64-v8a
-  curl -Lso tmp.zip "https://github.com/XTLS/Xray-core/releases/download/$VERSION/Xray-linux-arm32-v7a.zip"
+  curl -Lso tmp.zip "https://github.com/loreliu/Xray-core/releases/download/$VERSION/Xray-linux-arm32-v7a.zip"
   unzip_xray armeabi-v7a
-  curl -Lso tmp.zip "https://github.com/XTLS/Xray-core/releases/download/$VERSION/Xray-linux-32.zip"
+  curl -Lso tmp.zip "https://github.com/loreliu/Xray-core/releases/download/$VERSION/Xray-linux-32.zip"
   unzip_xray x86
-  curl -Lso tmp.zip "https://github.com/XTLS/Xray-core/releases/download/$VERSION/Xray-linux-64.zip"
+  curl -Lso tmp.zip "https://github.com/loreliu/Xray-core/releases/download/$VERSION/Xray-linux-64.zip"
   unzip_xray x86_64
 }
 

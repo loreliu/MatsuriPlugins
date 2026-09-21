@@ -171,6 +171,24 @@ export var translates = {
         "": "This configuration (XTLS) can be detected and identified.",
     },
 
+    // Mux
+    MuxSettings: {
+        "zh_CN": "多路复用设置",
+        "": "Mux Settings",
+    },
+    serverMuxEnabled: {
+        "zh_CN": "启用多路复用",
+        "": "Enable Multiplexer",
+    },
+    serverMuxConcurrency: {
+        "zh_CN": "最大并发连接数",
+        "": "Max Concurrent Connections",
+    },
+    serverMuxConcurrency_summary: {
+        "zh_CN": "填负数时，如 -1，不加载 mux 模块，即不使用 Mux 模块承载 TCP 流量。",
+        "": "When set to a negative number, such as -1, the mux module is not loaded. i.e. the Mux module is not used to carry TCP traffic.",
+    },
+
     // Brook
     serverProtocol: {
         "": "Protocol",

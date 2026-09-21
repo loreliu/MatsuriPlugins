@@ -27,6 +27,8 @@ class vlessClass {
         this.defaultSharedStorage.serverPath = ""
         this.defaultSharedStorage.serverSecurity = "none"
         this.defaultSharedStorage.grpcMultiMode = false
+        this.defaultSharedStorage.serverMuxEnabled = false
+        this.defaultSharedStorage.serverMuxConcurrency = "8"
         // tls
         this.defaultSharedStorage.utlsFingerprint = ""
         this.defaultSharedStorage.serverSNI = ""
@@ -309,6 +311,22 @@ class vlessClass {
                     },
                 ]
 
+            },
+            {
+                "key": "MuxSettings",
+                 "preferences": [
+                    {
+                        "type": "SwitchPreference",
+                        "key": "serverMuxEnabled",
+                        "icon": "ic_baseline_compare_arrows_24"
+                    },
+                    {
+                        "type": "EditTextPreference",
+                        "key": "serverMuxConcurrency",
+                        "icon": "ic_baseline_low_priority_24",
+                        "summary": TR("serverMuxConcurrency_summary")
+                    },
+                 ]
             }
         ]
         this.common._applyTranslateToPreferenceScreenConfig(sb, TR)
@@ -552,6 +570,8 @@ class vlessClass {
             if (ss.serverSecurity == "xtls") {
                 canMux = false
             }
+            args.muxEnabled = ss.serverMuxEnabled
+            args.muxConcurrency = parseInt(ss.serverMuxConcurrency)
 
             let t0 = {
                 "log": {
