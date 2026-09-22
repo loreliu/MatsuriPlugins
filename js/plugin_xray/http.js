@@ -289,12 +289,13 @@ class httpClass {
                 t0.outbounds[0].streamSettings["tlsSettings"] = t2
             }
 
+            let uniqueConfigName = `config_${args.port}_${args.finalPort}.json`
             let v = {}
-            v.nekoCommands = ["%exe%", "-config", "config.json"]
+            v.nekoCommands = ["%exe%", "-config", uniqueConfigName]
 
             v.nekoRunConfigs = [
                 {
-                    "name": "config.json",
+                    "name": uniqueConfigName,
                     "content": JSON.stringify(t0)
                 }
             ]
