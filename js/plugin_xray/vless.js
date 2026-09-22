@@ -323,8 +323,7 @@ class vlessClass {
                     {
                         "type": "EditTextPreference",
                         "key": "serverMuxConcurrency",
-                        "icon": "ic_baseline_low_priority_24",
-                        "summary": TR("serverMuxConcurrency_summary")
+                        "icon": "ic_baseline_low_priority_24"
                     },
                  ]
             }
